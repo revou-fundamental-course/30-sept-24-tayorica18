@@ -4,11 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kalkulator Konversi Suhu</title>
     <link rel="stylesheet" href="css\styles.css">
 </head>
 
 <body>
+    <header>
+        <h1>Kalkulator Konversi Suhu</h1>
+        <hr/>
+    </header>
+        
+    
+    <main>
+        <!--Form Content-->
+        <section>
+            <!-- Instruksi -->
+            <article>
+                <p>Masukkan suhu dalam derajat Celsius (&deg;C) dan klik tombol konversi untuk mendapatkan hasil suhu dalam derajat Fahrenheit (&deg;F).</p>
+            </article>
+
+            <!-- Input Suhu -->
+            <form>
+                <div>
+                    <label for="input-suhu">Celcius (&deg;C)</label>
+                </div>
+
+                <textarea id="input-suhu"></textarea>
+
+                <div class="padding-16">
+                <button class="form-btn form-btn-submit">Konversi</button>
+                <button class="form-btn form-btn-reset">Reset</button>
+                <button class="form-btn form-btn-reverse">Reverse</button>
+                </div>
+            </form>
+
+            <!-- Hasil Input -->
+            <div>
+                <label for="hasil-suhu">Fahrenheit (&deg;F)</label>
+            </div>
+
+            <textarea id="hasil-suhu"></textarea>
+            </div>
+
+            <!-- Cara Kalkulasi -->
+            <div class="padding-16">
+                <div>
+                    <label for="how-to-suhu">Cara Kalkulasi:</label>
+                </div>
+    
+                <textarea id="how-to-suhu"></textarea>
+            </div>
+        </section>
+        
+        <!-- Info Content -->
+        <section>
+            <header>
+                <h2>Cara Konversi Celsius (&deg;C) ke Faherenheit (&deg;F)</h2>
+                <hr />
+            </header>
+
+
+            <article>
+                <p>Suhu
+                    <span class="suhu-style">S</span> dalam derajat Fahrenheit sama dengan suhu <span class="suhu-style">S</span> dalam derajat Celsius (&deg;C) </p>
+                <p><span class="suhu-style">S <sub>(&deg;F)</sub></span></p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>By Edward@2024</p>
+    </footer>
     
 </body>
 
