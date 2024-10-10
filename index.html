@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Konversi Suhu</title>
-    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -13,69 +13,48 @@
         <h1>Kalkulator Konversi Suhu</h1>
         <hr/>
     </header>
-        
-    
+
     <main>
         <!--Form Content-->
         <section>
-            <!-- Instruksi -->
+            <!-- Instruction -->
             <article>
                 <p>Masukkan suhu dalam derajat Celsius (&deg;C) dan klik tombol konversi untuk mendapatkan hasil suhu dalam derajat Fahrenheit (&deg;F).</p>
             </article>
 
             <!-- Input Suhu -->
-            <form>
+            <form id="tempForm">
                 <div>
-                    <label for="input-suhu">Celcius (&deg;C)</label>
+                    <label for="input-suhu">Celsius (&deg;C)</label>
                 </div>
-
-                <textarea id="input-suhu"></textarea>
-
+                <input id="input-suhu" type="text" required oninput="validateInput()" placeholder="Masukkan angka...">
+                
                 <div class="padding-16">
-                <button class="form-btn form-btn-submit">Konversi</button>
-                <button class="form-btn form-btn-reset">Reset</button>
-                <button class="form-btn form-btn-reverse">Reverse</button>
+                    <button type="button" class="form-btn form-btn-submit" onclick="convertTemp()">Konversi</button>
+                    <button type="reset" class="form-btn form-btn-reset" onclick="resetForm()">Reset</button>
+                    <button type="button" class="form-btn form-btn-reverse" onclick="reverseConversion()">Reverse</button>
                 </div>
             </form>
 
-            <!-- Hasil Input -->
+            <!-- Result Field -->
             <div>
                 <label for="hasil-suhu">Fahrenheit (&deg;F)</label>
             </div>
+            <textarea id="hasil-suhu" disabled></textarea>
 
-            <textarea id="hasil-suhu"></textarea>
-            </div>
-
-            <!-- Cara Kalkulasi -->
+            <!-- Explanation Field -->
             <div class="padding-16">
                 <div>
                     <label for="how-to-suhu">Cara Kalkulasi:</label>
                 </div>
-    
-                <textarea id="how-to-suhu"></textarea>
+                <textarea id="how-to-suhu" disabled></textarea>
             </div>
-        </section>
-        
-        <!-- Info Content -->
-        <section>
-            <header>
-                <h2>Cara Konversi Celsius (&deg;C) ke Faherenheit (&deg;F)</h2>
-                <hr />
-            </header>
-
-
-            <article>
-                <p>Suhu
-                    <span class="suhu-style">S</span> dalam derajat Fahrenheit sama dengan suhu <span class="suhu-style">S</span> dalam derajat Celsius (&deg;C) </p>
-                <p><span class="suhu-style">S <sub>(&deg;F)</sub></span></p>
-            </article>
         </section>
     </main>
 
-    <footer>
-        <p>By Edward@2024</p>
-    </footer>
-    
+    <footer></footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
